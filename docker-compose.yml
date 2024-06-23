@@ -1,0 +1,17 @@
+services:
+  php:
+    build: infra/docker/php
+    container_name: php_mail
+    hostname: php_mail
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/var/www/html
+    working_dir: /var/www/html
+    environment:
+      - XDEBUG_CONFIG=remote_host=host.docker.internal
+      - USERNAME=fw1987@gmail.com
+      - PASSWORD=fpeusdogvvydqerx
+      - SMTP_SERVER=smtp.gmail.com
+
+    entrypoint: /usr/bin/entrypoint.sh
