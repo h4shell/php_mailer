@@ -12,6 +12,7 @@ services:
       - XDEBUG_CONFIG=remote_host=host.docker.internal
       - USERNAME=fw1987@gmail.com
       - PASSWORD=fpeusdogvvydqerx
+      - NAME=Lorenzo Fornara
       - SMTP_SERVER=smtp.gmail.com
 
     entrypoint: /usr/bin/entrypoint.sh
