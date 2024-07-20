@@ -23,7 +23,7 @@ class SendMail
         $this->mail->Password = getenv('PASSWORD');
         $this->mail->SMTPSecure = 'ssl';                       //Enable implicit TLS encryption
         $this->mail->Port = 465;
-        $this->mail->setFrom("fw1987@gmail.com", "Lorenzo Fornara");
+        $this->mail->setFrom(getenv('USERNAME'), getenv('NAME'));
         $this->mail->addAddress($this->to, $this->to);     //Add a recipient
         $this->mail->isHTML(true);                                  //Set email format to HTML
         $this->mail->Subject = $this->subject; //Subject of the email
